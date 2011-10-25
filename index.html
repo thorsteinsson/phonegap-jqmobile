@@ -1,63 +1,49 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
-		<title>Training App</title>
-		<link rel="stylesheet" href="assets/css/master.css" type="text/css" media="screen" />
-		
-		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/xui.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/lawnchair/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/lawnchair/adaptors/DOMStorageAdaptor.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/lawnchair/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/lawnchair/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
-		
+		<title>Landsbankinn</title>
+		<link rel="stylesheet" href="jquery.mobile/jquery.mobile.min.css" />
+		<script src="jquery.mobile/jquery-1.6.4.min.js"></script>
+		<script src="jquery.mobile/jquery.mobile.min.js"></script>
 	</head>
 	<body>
- 		<div id="title_bar">Phone<strong>Gap</strong> Training App</div>
+	
+	<div data-role="page" class="type-index">
 
-		<div id="welcome" class="view">
-		  <div class="app_button" id="map_button">Show My Location</div>
-  	      <div class="app_button" id="settings_button">Settings</div>
+		<div data-role="header" data-theme="d">
+			<h1>Landsbankinn</h1>
+			<a href="../index.html" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
 		</div>
 
-		<div id="map" class="view">
-		  <div class="map_image">
-              <img id="static_map" src="assets/img/staticmap.png">
-		  </div>
-		  <p>This is where you are</p>
-		  <div class="app_button" id="welcome_button">Go Back</div>
+		<div data-role="content">
+		
+			<a href="http://m.einkabanki.is" data-role="button" data-icon="arrow-r" data-iconpos="right">Netbanki</a>
+
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+				<li data-role="list-divider">Bankinn</li>
+				<li><a href="toolbars/index.html">Hraðbankar</a></li>
+				<li><a href="pages/index.html">Útibú</a></li>
+				<li><a href="content/index.html">Fréttir</a></li>
+			</ul>
+
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+				<li data-role="list-divider">Markaðir</li>
+				<li><a href="toolbars/index.html">Gengi gjaldmiðla</a></li>
+				<li><a href="pages/index.html">Skuldabréf</a></li>
+				<li><a href="content/index.html">Hlutabréf</a></li>
+				<li><a href="content/index.html">Vísitölur</a></li>
+				<li><a href="content/index.html">Fréttir</a></li>
+			</ul>
+			
+		</div>
+		
+		<div data-role="footer" data-theme="d">
+			<h4>Þjónustuver <a href="tel:4104000">410 4000</a></h4>
 		</div>
 
-		<div id="settings" class="view">
-		  <form id="settings_form">
-		    <fieldset>
-		      <legend>Map Type</legend>
-			  <input type="radio" name="map" value="roadmap" checked>Road Map<br/>
-		      <input type="radio" name="map" value="satellite">Satellite<br/>
-		      <input type="radio" name="map" value="terrain">Terrain<br/>
-		      <input type="radio" name="map" value="hybrid">Hybrid<br/>
-		    </fieldset>
-		    <fieldset>
-		      <legend>Zoom Level</legend>
-  		      <input type="radio" name="zoom" value="10">Super Far<br/>
-  		      <input type="radio" name="zoom" value="12">Far<br/>
-  		      <input type="radio" name="zoom" value="15" checked>Normal<br/>
-  		      <input type="radio" name="zoom" value="18">Close<br/>
-  		      <input type="radio" name="zoom" value="20">Super Close<br/>
-  		     </fieldset>
-		      <button id="save_button">Save</button>
-	      </form>
-		</div>
+	</div>
 
 	</body>
 </html>
